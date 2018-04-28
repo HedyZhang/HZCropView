@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "YXCropperView.h"
 
-@interface ViewController ()
+@interface ViewController ()<YXCropperViewDelegate>
 
 @end
 
@@ -16,9 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = [UIColor cyanColor];
+    
+    YXCropperView *overlayView = [[YXCropperView alloc] initWithFrame:self.view.bounds];
+    overlayView.delegate = self;
+    [self.view addSubview:overlayView];
 }
 
+
+- (void)confirmCropArea:(CGRect)cropRect {
+    NSLog(@"crop Area = %@", NSStringFromCGRect(cropRect));
+}
+
+- (void)cancelCrop {
+    NSLog(@"cancel crop");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

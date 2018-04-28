@@ -13,6 +13,8 @@
 		5341D0822092BA8C0010D9B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5341D0812092BA8C0010D9B7 /* Assets.xcassets */; };
 		5341D0852092BA8C0010D9B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5341D0832092BA8C0010D9B7 /* LaunchScreen.storyboard */; };
 		5341D0882092BA8C0010D9B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5341D0872092BA8C0010D9B7 /* main.m */; };
+		5341D0922092BA990010D9B7 /* YXCropperOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5341D08E2092BA980010D9B7 /* YXCropperOverlayView.m */; };
+		5341D0932092BA990010D9B7 /* YXCropperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5341D08F2092BA980010D9B7 /* YXCropperView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		5341D0842092BA8C0010D9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5341D0862092BA8C0010D9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5341D0872092BA8C0010D9B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5341D08E2092BA980010D9B7 /* YXCropperOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCropperOverlayView.m; sourceTree = "<group>"; };
+		5341D08F2092BA980010D9B7 /* YXCropperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCropperView.m; sourceTree = "<group>"; };
+		5341D0902092BA990010D9B7 /* YXCropperOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCropperOverlayView.h; sourceTree = "<group>"; };
+		5341D0912092BA990010D9B7 /* YXCropperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCropperView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				5341D0792092BA8B0010D9B7 /* AppDelegate.m */,
 				5341D07B2092BA8B0010D9B7 /* ViewController.h */,
 				5341D07C2092BA8B0010D9B7 /* ViewController.m */,
+				5341D0902092BA990010D9B7 /* YXCropperOverlayView.h */,
+				5341D08E2092BA980010D9B7 /* YXCropperOverlayView.m */,
+				5341D0912092BA990010D9B7 /* YXCropperView.h */,
+				5341D08F2092BA980010D9B7 /* YXCropperView.m */,
 				5341D07E2092BA8B0010D9B7 /* Main.storyboard */,
 				5341D0812092BA8C0010D9B7 /* Assets.xcassets */,
 				5341D0832092BA8C0010D9B7 /* LaunchScreen.storyboard */,
@@ -142,7 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5341D07D2092BA8B0010D9B7 /* ViewController.m in Sources */,
+				5341D0932092BA990010D9B7 /* YXCropperView.m in Sources */,
 				5341D0882092BA8C0010D9B7 /* main.m in Sources */,
+				5341D0922092BA990010D9B7 /* YXCropperOverlayView.m in Sources */,
 				5341D07A2092BA8B0010D9B7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -272,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -286,11 +298,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22R5TS4DAZ;
 				INFOPLIST_FILE = CropOverlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaidi.CropOverlay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaidi.ConnectTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,11 +316,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22R5TS4DAZ;
 				INFOPLIST_FILE = CropOverlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaidi.CropOverlay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaidi.ConnectTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
