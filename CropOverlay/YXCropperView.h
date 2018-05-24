@@ -25,6 +25,10 @@
 @property (nonatomic, strong) UIButton *okButton;
 @property (nonatomic, strong) UIButton *cancelButton;
 
+//在
 @property (nonatomic, assign) BOOL isEditingHiddenGrid;
+
+@property (nonatomic, assign) CGFloat borderWidth;
+@property (nonatomic, strong) UIColor *borderColor;
 
 @end

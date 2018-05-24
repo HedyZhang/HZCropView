@@ -123,7 +123,7 @@ static CGFloat const kCornerSquareWidth = 30;
     //画边框
     CGContextSaveGState(contextRef);
     CGContextSetStrokeColorWithColor(contextRef, self.borderColor.CGColor);
-    CGContextSetLineWidth(contextRef, 2);
+    CGContextSetLineWidth(contextRef, self.borderWidth);
     CGContextAddRect(contextRef, self.clearRect);
     CGContextStrokePath(contextRef);
     CGContextRestoreGState(contextRef);

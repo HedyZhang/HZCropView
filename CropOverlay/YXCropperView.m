@@ -80,7 +80,7 @@ typedef NS_ENUM(NSUInteger, YXOverlayViewPanningMode) {
          }
     } else if (recognizer.state == UIGestureRecognizerStateChanged) {
         if (self.isCenterCleanRect) {
-            self.overlayView.gridHidden = ~self.isEditingHiddenGrid;
+            self.overlayView.gridHidden = self.isEditingHiddenGrid;
         }
     } else {
          if (self.isCenterCleanRect) {
@@ -200,6 +200,19 @@ typedef NS_ENUM(NSUInteger, YXOverlayViewPanningMode) {
     }
 }
 
+
+#pragma mark - Setter
+
+- (void)setBorderColor:(UIColor *)borderColor {
+    _borderColor = borderColor;
+    self.overlayView.borderColor = _borderColor;
+}
+
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    _borderWidth = borderWidth;
+    self.overlayView.borderWidth = _borderWidth;
+    [self updateButtonFrameWithClearRect:self.overlayView.clearRect];
+}
 
 #pragma mark - Getter
 

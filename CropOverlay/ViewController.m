@@ -22,6 +22,9 @@
     
     YXCropperView *overlayView = [[YXCropperView alloc] initWithFrame:self.view.bounds];
     overlayView.delegate = self;
+    overlayView.isEditingHiddenGrid = NO;
+    overlayView.borderWidth = 0.5;
+    overlayView.borderColor = [UIColor redColor];
     [self.view addSubview:overlayView];
 }
 
